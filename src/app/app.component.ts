@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  value = 'coucou';
+  // TODO: étudier le cas async
+  // value = of('coucou').pipe(delay(2000));
 }
