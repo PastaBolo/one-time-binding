@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'oneTimeBinding'
+  name: 'oneTimeBinding',
+  pure: false
 })
 export class OneTimeBindingPipe implements PipeTransform {
   private binded = false;
